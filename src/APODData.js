@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react"; 
 import axios from "axios";
 import "./App.css"; 
+import { Container, Row, Col, Button } from 'reactstrap';
+import Photo from "./components/Photo.js";
+import Title from "./components/Title.js"; 
+import Info from "./components/Info.js"; 
+
 
 
 // function APODData() {
@@ -55,12 +60,24 @@ function APODData() {
   }, [])
   //console.log(photo)
   return (
-    <div>
-      <img src={photo.url} alt="space" />
-      <h3>{title.title}</h3>
-      <h4>{date.date}</h4>
-      <p className="Info">{info.explanation}</p>
-    </div>
+    <Container>
+      <Row> 
+        <Col><Photo url={photo.url} /></Col>
+      </Row>
+      <Row>
+        <Col sm={{ size: 'auto', offset: 4}}><Title title={title.title} date={date.date} />
+       </Col>
+      </Row>
+      <Row>
+      <Col sm={{ size: 6, offset: 3}}><Info info={info.explanation} /></Col>
+      </Row>
+      <Row>
+        <Col sm={{ size: 'auto', offset: 4}}> <h5> Discover more NASA API</h5></Col>
+      </Row>
+      <Row>
+        <Col sm={{ size: 'auto', offset: 5}}><Button color="primary" size="lg">Click Here</Button></Col>
+      </Row>
+    </Container>
   )
 }
 
