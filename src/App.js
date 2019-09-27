@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <h1>
-        Nasa's Photo of the Day 
+        NASA's Photo of the Day 
         <span role="img" aria-label="rocket emjio">
           🚀!
         </span>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"; 
 import axios from "axios";
+import "./App.css"; 
 
 
 // function APODData() {
@@ -58,7 +59,7 @@ function APODData() {
       <img src={photo.url} alt="space" />
       <h3>{title.title}</h3>
       <h4>{date.date}</h4>
-      <p>{info.explanation}</p>
+      <p className="Info">{info.explanation}</p>
     </div>
   )
 }
