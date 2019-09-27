@@ -5,8 +5,10 @@ function App() {
   return (
     <div className="App">
       <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
+        Nasa's Photo of the Day 
+        <span role="img" aria-label="rocket emjio">
+          🚀!
+        </span>
       </p>
     </div>
   );
