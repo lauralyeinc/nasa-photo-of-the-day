@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import APODData from "./data.js";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <span role="img" aria-label="rocket emjio">
           🚀!
         </span>
+        <APODData />
       </p>
     </div>
   );
