@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"; 
 import axios from "axios";
 import "./App.css"; 
-import { Container, Row, Col, Button } from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
 import Photo from "./components/Photo.js";
 import Title from "./components/Title.js"; 
 import Info from "./components/Info.js"; 
@@ -18,7 +18,7 @@ import LinkButton from "./components/Button.js";
 //       try {
 //         let dataLink = await axios.get("https://api.nasa.gov/planetary/apod?api_key=85vcaunC1sbwAs2RujfNIfQ8IGQahxzv2iu4i0i2");
 
-//         // console.log(typeof(results));
+//         //console.log(typeof(results));
 //         console.log(dataLink);
 
 //         setPhoto(photo.data);
@@ -37,13 +37,14 @@ import LinkButton from "./components/Button.js";
 //  }
 
 //  export default APODData; 
-
+ //console.log();
+ 
 function APODData() {
   
   const [photo, setPhoto] = useState(""); 
   const [date, setDate] = useState("");
   const [info, setInfo] = useState("");
-  const [title, setTitle] = useState(""); 
+  const [title, setTitle] = useState("");  
 
   useEffect(() => {
     axios
@@ -76,7 +77,11 @@ function APODData() {
         <Col sm={{ size: 'auto', offset: 4}}> <h5> Discover more NASA API</h5></Col>
       </Row>
       <Row>
-        <Col sm={{ size: 'auto', offset: 5}}><LinkButton content={`Click Here`} /> </Col>
+        <Col sm={{ size: 'auto', offset: 5}}>
+          
+          <LinkButton> <a href="https://api.nasa.gov/"> <p>Click Here</p> </a>
+         </LinkButton> 
+        </Col>
       </Row>
     </Container>
   )

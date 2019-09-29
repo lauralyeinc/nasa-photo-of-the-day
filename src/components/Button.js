@@ -1,4 +1,4 @@
-import React from "react"; 
+//import React from "react"; 
 import styled from "styled-components";
 
 let LinkButton = styled.button`
@@ -14,10 +14,5 @@ let LinkButton = styled.button`
   }
 `;
 
-const LinkButton = props => {
-  return (
-    <button>
-      {props.content}
-    </button>
-  )
-}
+export default LinkButton; 
+
