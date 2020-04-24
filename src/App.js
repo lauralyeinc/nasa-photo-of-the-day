@@ -1,13 +1,18 @@
 import React from "react";
 import "./App.css";
+import APODData from "./APODData.js";
 
 function App() {
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
+      <h1>
+        NASA's Photo of the Day 
+        <span role="img" aria-label="rocket emjio">
+          🚀!
+        </span>
+        
+      </h1>
+      <APODData />
     </div>
   );
 }
